@@ -1,5 +1,7 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form"; // reduxForm is a lot like connect(). Adds a bunch to props
+import { connect } from "react-redux";
+import { createStream } from "../../actions";
 
 class StreamCreate extends React.Component {
   state = {};
@@ -26,9 +28,9 @@ class StreamCreate extends React.Component {
   };
 
   // Due to the form below having an onSubmit prop with handleSubmit from redux forms, we get passed all the inputs' values on submission in an argument to the  helper below
-  onSubmit(formValues) {
-    console.log(formValues);
-  }
+  onSubmit = formValues => {
+    this.props.createStream(formValues);
+  };
 
   render() {
     return (
@@ -61,7 +63,18 @@ const validate = formValues => {
   return errors;
 };
 
-export default reduxForm({
+// METHOD 1: Of hooking up redux connect and redux form
+// export default connect()(reduxForm({
+//   form: "streamCreate",
+//   validate: validate
+// })(StreamCreate));
+//METHOD 2: Connecting Redux connect and form by creating a constant and just passing in to connect's paramater
+const formWrapped = reduxForm({
   form: "streamCreate",
   validate: validate
 })(StreamCreate);
+
+export default connect(
+  null,
+  { createStream }
+)(formWrapped);
