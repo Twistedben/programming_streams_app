@@ -11,6 +11,7 @@
   - JSON-Server Configuration for JSON DB storage and REST
   - Axios
   - Redux & Redux Thunk
+  - Lodash for object manipulation
 
 #### Notes
 
