@@ -15,5 +15,5 @@
 
 #### Notes
 
-To run JSON-Server, cd into /api folder and run `npm start`. JSON-Server runs at :3001 and [<http://localhost:3001/streams]>
+To run JSON-Server, cd into /api folder and run `npm start`. JSON-Server runs at :3001 and <http://localhost:3001/streams>
 To run app, cd into /client folder and run `npm start`

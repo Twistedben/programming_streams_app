@@ -23,8 +23,10 @@ export const signOut = params => {
 };
 
 // Uses the axios.create in apis/streams.js file to do a network post request to json-server
-export const createStream = formValues => async dispatch => {
-  const response = await streams.post("/streams", formValues);
+export const createStream = formValues => async (dispatch, getState) => {
+  // Grab the userId from auth state and assign it to userId (getState().auth.userId) and then pass in as an additional field to formvalues
+  const { userId } = getState().auth;
+  const response = await streams.post("/streams", { ...formValues, userId });
 
   dispatch({ type: CREATE_STREAM, payload: response.data });
 };
