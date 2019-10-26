@@ -47,13 +47,16 @@ export const fetchStream = id => async dispatch => {
 };
 
 export const editStream = (id, formValues) => async dispatch => {
-  const response = await streams.put(`/streams/${id}`, formValues);
+  // We use patch instead of put so that the userId isn't lost when edited. Put would drop the userId since we didn't pass it in formValues.
+  const response = await streams.patch(`/streams/${id}`, formValues);
 
   dispatch({ type: EDIT_STREAM, payload: response.data });
+  history.push("/");
 };
 
 export const deleteStream = id => async dispatch => {
   await streams.delete(`/streams/${id}`);
 
   dispatch({ type: DELETE_STREAM, payload: id });
+  history.push("/");
 };

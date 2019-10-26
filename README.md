@@ -9,7 +9,7 @@
   - Google OAuth
   - Redux Form
   - JSON-Server Configuration for JSON DB storage and REST
-  - Axios
+  - Axios for backend API requests and CRUD actions.
   - Redux & Redux Thunk
   - Lodash for object manipulation
 
