@@ -1,0 +1,31 @@
+{
+  "streams": [
+    {
+      "title": "My Stream",
+      "description": "My great stream",
+      "id": 1
+    },
+    {
+      "title": "Another STream",
+      "description": "Here's some stream",
+      "id": 2
+    },
+    {
+      "title": "User Id stream",
+      "description": "This has a user id",
+      "userId": "101609862116247377963",
+      "id": 3
+    },
+    {
+      "title": "Unexpected behavior",
+      "description": "Didn't expect that",
+      "userId": "101609862116247377963",
+      "id": 4
+    },
+    {
+      "title": "Me STreaming Component Reuse",
+      "description": "Edited description again with PATCH",
+      "id": 6
+    }
+  ]
+}
