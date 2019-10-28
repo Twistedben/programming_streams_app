@@ -26,6 +26,6 @@ A video streaming app where you can use OBS to stream programming sessions.
 
 #### Screenshots
 
-![alt text](https://github.com/Twistedben/programming_streams_app/tree/master/client/public/screenshots/codeStreamingApp-index.png "Stream Home Page")
+![alt text](https://github.com/Twistedben/programming_streams_app/blob/master/client/public/screenshots/codeStreamingApp-index.png "Stream Home Page")
 
-![alt text](https://github.com/Twistedben/programming_streams_app/tree/master/client/public/screenshots/codeStreamingApp-stream.png "Active Stream")
+![alt text](https://github.com/Twistedben/programming_streams_app/blob/master/client/public/screenshots/codeStreamingApp-stream.png "Active Stream")
